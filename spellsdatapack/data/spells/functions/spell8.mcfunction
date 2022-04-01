@@ -1,0 +1,4 @@
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:8}}},scores={rightclick=1..}] at @s run scoreboard players set @s spell8timer 300
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:8}}},scores={rightclick=1..}] at @s run playsound entity.illusioner.cast_spell master @a ~ ~ ~ 2 0.5 1
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:8}}},scores={rightclick=1..}] run scoreboard players remove @s mana 200
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:8}}},scores={rightclick=1..}] run tellraw @s {"text":"You used Mana Formation! (-200 Mana)","color":"blue","bold":true}

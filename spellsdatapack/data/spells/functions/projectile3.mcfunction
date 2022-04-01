@@ -1,0 +1,14 @@
+execute as @e[tag=projectile3] at @s run tp @s ^ ^ ^-1
+execute as @e[tag=projectile3] at @s positioned as @s run particle snowflake ^ ^ ^ 0.1 0.1 0.1 0 2 normal @a
+execute as @e[tag=projectile3] at @s positioned as @s run particle item_snowball ^ ^ ^ 0 0 0 0 1 normal @a
+execute as @e[tag=projectile3] at @s positioned as @s unless block ^ ^ ^1 air run fill ~ ~1 ~ ~ ~2 ~ ice replace air
+execute as @e[tag=projectile3] at @s positioned as @s unless block ^ ^ ^1 air run playsound block.glass.break master @a ~ ~ ~ 1 2
+execute as @e[tag=projectile3] at @s positioned as @s unless block ^ ^ ^1 air run kill @s
+execute as @e[tag=projectile3] at @s run tp @s ^ ^ ^-1
+execute as @e[tag=projectile3] at @s positioned as @s run particle snowflake ^ ^ ^ 0.1 0.1 0.1 0 2 normal @a
+execute as @e[tag=projectile3] at @s positioned as @s run particle item_snowball ^ ^ ^ 0 0 0 0 1 normal @a
+execute as @e[tag=projectile3] at @s positioned as @s unless block ^ ^ ^1 air run fill ~ ~1 ~ ~ ~2 ~ ice replace air
+execute as @e[tag=projectile3] at @s positioned as @s unless block ^ ^ ^1 air run playsound block.glass.break master @a ~ ~ ~ 1 2
+execute as @e[tag=projectile3] at @s positioned as @s unless block ^ ^ ^1 air run kill @s
+execute as @e[tag=projectile3] run scoreboard players add @s projtime 1
+execute as @e[tag=projectile3] if score @s projtime matches 5.. run kill @s

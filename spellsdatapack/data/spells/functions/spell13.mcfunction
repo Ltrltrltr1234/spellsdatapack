@@ -1,0 +1,4 @@
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:13}}},scores={rightclick=1..}] at @s run scoreboard players set @s spell13timer 200
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:13}}},scores={rightclick=1..}] at @s run playsound block.beacon.power_select master @a ~ ~ ~ 5 2 1
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:13}}},scores={rightclick=1..}] run scoreboard players remove @s mana 240
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:13}}},scores={rightclick=1..}] run tellraw @s {"text":"You used Spectral Bulwark! (-240 Mana)","color":"green","bold":true}

@@ -1,0 +1,7 @@
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:1}}},scores={rightclick=1..}] run effect give @s speed 25 3
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:1}}},scores={rightclick=1..}] run effect give @s haste 25 2
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:1}}},scores={rightclick=1..}] run effect give @s jump_boost 25 3
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:1}}},scores={rightclick=1..}] at @s run particle cloud ^ ^2 ^ 0.5 0.5 2 0 100 normal @a
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:1}}},scores={rightclick=1..}] at @s run playsound entity.firework_rocket.launch master @a ~ ~ ~ 5 0.5 0
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:1}}},scores={rightclick=1..}] run scoreboard players remove @s mana 300
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:1}}},scores={rightclick=1..}] run tellraw @s {"text":"You used Gale's Blessing! (-300 Mana)","color":"aqua","bold":true}

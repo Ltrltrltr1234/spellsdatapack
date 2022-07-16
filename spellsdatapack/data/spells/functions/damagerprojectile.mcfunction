@@ -1,2 +1,0 @@
-execute as @e[tag=damager1] at @s facing entity @e[type=!arrow,team=!team1,sort=nearest,limit=1] feet run function spells:projectile-motion
-execute as @e[tag=damager2] at @s facing entity @e[type=!arrow,team=!team2,sort=nearest,limit=1] feet run function spells:projectile-motion

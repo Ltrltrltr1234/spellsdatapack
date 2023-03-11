@@ -1,0 +1,4 @@
+execute as @e[scores={spell24kbtimer=1..}] run scoreboard players remove @s spell24kbtimer 1
+execute as @e[scores={spell24kbtimer=1..},team=team1] at @s run execute as @e[team=!team1,distance=..10,scores={spell24kbtargettimer=1..}] at @s facing entity @a[scores={spell24kbtimer=1..},sort=nearest,limit=1,team=team1] feet rotated ~ 0 if block ^ ^0.5 ^-0.5 air run tp @s ^ ^0.01 ^-0.5
+execute as @e[scores={spell24kbtimer=1..},team=team2] at @s run execute as @e[team=!team2,distance=..10,scores={spell24kbtargettimer=1..}] at @s facing entity @a[scores={spell24kbtimer=1..},sort=nearest,limit=1,team=team2] feet rotated ~ 0 if block ^ ^0.5 ^-0.5 air run tp @s ^ ^0.01 ^-0.5
+execute as @e[scores={spell24kbtargettimer=1..}] run scoreboard players remove @s spell24kbtargettimer 1

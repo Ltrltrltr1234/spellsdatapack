@@ -1,0 +1,5 @@
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:10}}},scores={rightclick=1..}] at @s run scoreboard players set @s spell10timer 200
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:10}}},scores={rightclick=1..}] at @s run playsound entity.phantom.death master @a ~ ~ ~ 10 0.5 0
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:10}}},scores={rightclick=1..}] at @s run particle dust_color_transition 0.000 0.000 0.000 2 0.412 0.000 0.620 ~ ~ ~ 1 1 1 2 300 normal @a
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:10}}},scores={rightclick=1..}] run scoreboard players remove @s mana 120
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:10}}},scores={rightclick=1..}] run tellraw @s {"text":"You used Umbramancy! (-120 mana)","color":"#555555","bold":true}

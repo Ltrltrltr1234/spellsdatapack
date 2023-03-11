@@ -1,0 +1,7 @@
+execute as @s[scores={rightclick=1..}] at @s run summon armor_stand ^-1 ^1 ^ {Team:"team1",Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["fungusseed"],DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:moss_block",Count:1b,tag:{Enchantments:[{}]}}]}
+execute as @s[scores={rightclick=1..}] at @s run summon armor_stand ^ ^1 ^1 {Team:"team1",Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["fungusseed"],DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:moss_block",Count:1b,tag:{Enchantments:[{}]}}]}
+execute as @s[scores={rightclick=1..}] at @s run summon armor_stand ^1 ^1 ^ {Team:"team1",Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["fungusseed"],DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:moss_block",Count:1b,tag:{Enchantments:[{}]}}]}
+execute as @s[scores={rightclick=1..}] at @s run execute as @e[sort=nearest,limit=3,tag=fungusseed,tag=!motion_added] at @s facing entity @a[sort=nearest,limit=1,team=team1] eyes rotated ~180 -45 run function spells:projectile-motion3
+execute as @s[scores={rightclick=1..}] at @s run playsound block.grass.break master @a ~ ~ ~ 5 0.5
+execute as @s[scores={rightclick=1..}] run tellraw @s {"text":"You used Fungal Synthesis! (-320 mana)","color":"#D86F56","bold":true}
+execute as @s[scores={rightclick=1..}] run scoreboard players remove @s mana 320

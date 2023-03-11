@@ -1,0 +1,4 @@
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:5}}},scores={rightclick=1..},team=team1] at @s run particle happy_villager ^ ^2 ^ 1 1 1 1 100 normal @a
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:5}}},scores={rightclick=1..},team=team1] at @s run summon armor_stand ~ ~ ~ {Team:"team1",Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["nullshockimmune","healingcircle"],DisabledSlots:4144959}
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:5}}},scores={rightclick=1..},team=team1] run scoreboard players remove @s mana 250
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:5}}},scores={rightclick=1..},team=team1] run tellraw @s {"text":"You used Spiritual Vitality! (-250 Mana)","color":"aqua","bold":true}

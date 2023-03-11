@@ -1,0 +1,12 @@
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:9}}},scores={mana=50..,rightclick=1..,focus=0}] run tag @s add focuschecked
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:9}}},scores={mana=50..,rightclick=1..,focus=1..}] at @s run scoreboard players set @s focus 0
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:9}}},tag=focuschecked] at @s run scoreboard players set @s focus 1
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:9}}},tag=focuschecked] at @s run scoreboard players set @s beamtimer 0
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:9}}},scores={rightclick=1..}] run tag @s remove focuschecked
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:9}}},scores={mana=..29}] run scoreboard players set @s focus 0
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:9}}},scores={mana=50..,focus=1}] at @s positioned as @s run summon armor_stand ^ ^0 ^2 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["projectile3"],DisabledSlots:4144959}
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:9}}},scores={mana=50..,focus=1}] at @s run execute as @e[sort=nearest,limit=1,tag=projectile3] at @s positioned as @s run tp @s ~ ~ ~ facing entity @p
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:9}}},scores={mana=50..,focus=1..}] at @s run execute as @e[sort=nearest,limit=1,tag=projectile3] at @s positioned as @s run tp @s ~ ~1 ~
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:9}}},scores={mana=50..,focus=1}] at @s run playsound block.lava.extinguish master @a ~ ~ ~ 1 2 0
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:9}}},scores={mana=50..,focus=1,beamtimer=0}] run scoreboard players remove @s mana 50
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:9}}},scores={mana=50..,focus=1,rightclick=1..,beamtimer=0}] run tellraw @s {"text":"You are using Cryomancy! (-50 mana per second)","color":"aqua","bold":true}

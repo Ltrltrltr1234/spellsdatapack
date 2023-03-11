@@ -1,0 +1,4 @@
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:2}}},scores={rightclick=1..}] at @s align xyz run summon armor_stand ^ ^ ^ {CustomNameVisible:0b,NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,DisabledSlots:4144959,Tags:["terramancy"]}
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:2}}},scores={rightclick=1..}] at @s run tp @e[limit=1,sort=nearest,tag=terramancy] @s
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:2}}},scores={rightclick=1..}] run scoreboard players remove @s mana 50
+execute as @e[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{wand:1b,spell:2}}},scores={rightclick=1..}] run tellraw @s {"text":"You used Terramancy! (-50 Mana)","color":"aqua","bold":true}
